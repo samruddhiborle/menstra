@@ -1,0 +1,1704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MENSTRA | Herbal Patch for Period Pain Relief</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fff8fc;
+      --surface: rgba(255, 255, 255, 0.82);
+      --surface-strong: #ffffff;
+      --primary: #a14eb5;
+      --primary-deep: #7d3695;
+      --secondary: #f5d7f0;
+      --accent: #f3a6c6;
+      --lavender: #e7d9fb;
+      --ink: #452b53;
+      --muted: #7c6788;
+      --line: rgba(122, 73, 143, 0.12);
+      --success: #4f9b71;
+      --shadow: 0 24px 70px rgba(128, 88, 146, 0.14);
+      --radius-xl: 32px;
+      --radius-lg: 24px;
+      --radius-md: 18px;
+      --max-width: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(243, 166, 198, 0.35), transparent 28%),
+        radial-gradient(circle at top right, rgba(161, 78, 181, 0.14), transparent 26%),
+        linear-gradient(180deg, #fffafc 0%, #fff7fb 35%, #fcf6ff 100%);
+      --mx: 50%;
+      --my: 20%;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background: radial-gradient(circle at var(--mx) var(--my), rgba(255, 255, 255, 0.42), transparent 16%);
+      z-index: 0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .shell {
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+    }
+
+    .container {
+      width: min(calc(100% - 2rem), var(--max-width));
+      margin: 0 auto;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.7rem 1rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid rgba(161, 78, 181, 0.12);
+      box-shadow: 0 12px 30px rgba(186, 143, 190, 0.08);
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--primary-deep);
+      backdrop-filter: blur(12px);
+    }
+
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    [data-reveal].is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .dot {
+      width: 0.55rem;
+      height: 0.55rem;
+      border-radius: 50%;
+      background: linear-gradient(180deg, var(--accent), var(--primary));
+      box-shadow: 0 0 0 5px rgba(243, 166, 198, 0.16);
+    }
+
+    .section {
+      padding: 4.5rem 0;
+      position: relative;
+    }
+
+    .eyebrow {
+      color: var(--primary);
+      font-size: 0.86rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.9rem;
+    }
+
+    h1, h2, h3, p {
+      margin-top: 0;
+    }
+
+    h1 {
+      font-size: clamp(2.6rem, 5vw, 4.9rem);
+      line-height: 0.96;
+      letter-spacing: -0.04em;
+      margin-bottom: 1.2rem;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1.02;
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      font-size: 1.15rem;
+      margin-bottom: 0.7rem;
+    }
+
+    p {
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    .site-header {
+      padding: 1.15rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(18px);
+      background: rgba(255, 248, 252, 0.72);
+      border-bottom: 1px solid rgba(161, 78, 181, 0.08);
+    }
+
+    .site-header .container,
+    .hero-grid,
+    .section-grid,
+    .cta-strip,
+    .footer-grid {
+      display: grid;
+      gap: 1.3rem;
+    }
+
+    .site-header .container {
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.9rem;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+    }
+
+    .brand-mark {
+      width: 3.5rem;
+      height: 3.5rem;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: radial-gradient(circle at 30% 30%, #d6f1e2 0%, #79bd8f 42%, #4b8e68 100%);
+      color: white;
+      box-shadow: 0 14px 30px rgba(93, 151, 124, 0.22), inset 0 0 0 6px rgba(255, 255, 255, 0.8);
+      font-size: 1.15rem;
+      overflow: hidden;
+    }
+
+    .brand-mark img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      display: none;
+    }
+
+    .brand small {
+      display: block;
+      color: var(--muted);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+    }
+
+    .nav {
+      justify-self: center;
+      display: none;
+      gap: 1.4rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .nav a:hover {
+      color: var(--primary-deep);
+    }
+
+    .header-action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.85rem 1.25rem;
+      border-radius: 999px;
+      background: var(--primary);
+      color: white;
+      font-weight: 700;
+      box-shadow: 0 18px 36px rgba(161, 78, 181, 0.24);
+    }
+
+    .hero {
+      padding: 2.6rem 0 4.5rem;
+    }
+
+    .hero-grid {
+      align-items: center;
+    }
+
+    .hero-copy {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-copy p {
+      max-width: 36rem;
+      font-size: 1.07rem;
+    }
+
+    .hero-logo-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.85rem;
+      padding: 0.9rem 1rem;
+      margin-bottom: 1rem;
+      border-radius: 1.2rem;
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(161, 78, 181, 0.12);
+      box-shadow: 0 12px 24px rgba(128, 88, 146, 0.08);
+    }
+
+    .hero-logo-chip .logo-slot {
+      width: 4.2rem;
+      height: 4.2rem;
+      border-radius: 50%;
+      overflow: hidden;
+      background: linear-gradient(180deg, #d6f1e2, #91d2a2);
+      flex: 0 0 4.2rem;
+      box-shadow: 0 16px 34px rgba(93, 151, 124, 0.2), inset 0 0 0 6px rgba(255, 255, 255, 0.84);
+    }
+
+    .hero-logo-chip img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: none;
+    }
+
+    .hero-logo-chip strong {
+      display: block;
+      font-size: 1.05rem;
+      color: var(--ink);
+    }
+
+    .hero-logo-chip span {
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    .hero-actions,
+    .mini-proof,
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      align-items: center;
+    }
+
+    .hero-actions {
+      margin: 1.8rem 0 1.8rem;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55rem;
+      min-height: 3.3rem;
+      padding: 0.85rem 1.35rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-weight: 700;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .modal {
+      position: fixed;
+      inset: 0;
+      z-index: 99;
+      background: rgba(0, 0, 0, 0.45);
+      display: grid;
+      place-items: center;
+      padding: 1.2rem;
+    }
+
+    .modal-content {
+      width: min(100%, 460px);
+      background: white;
+      border-radius: 1rem;
+      padding: 1.3rem 1.4rem;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+      color: var(--ink);
+      position: relative;
+    }
+
+    .modal-close {
+      position: absolute;
+      right: 0.75rem;
+      top: 0.75rem;
+      border: none;
+      background: none;
+      font-size: 1.4rem;
+      line-height: 1;
+      cursor: pointer;
+      color: #666;
+      font-weight: 700;
+    }
+
+    .modal-subtitle {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .modal-form .input-wrap {
+      margin-bottom: 0.85rem;
+      display: grid;
+      gap: 0.35rem;
+    }
+
+    .modal-form label {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--ink);
+    }
+
+    .modal-form input,
+    .modal-form textarea {
+      width: 100%;
+      min-height: 2.2rem;
+      padding: 0.66rem 0.7rem;
+      border: 1px solid rgba(161, 78, 181, 0.3);
+      border-radius: 0.8rem;
+      outline: none;
+      font: inherit;
+      color: var(--ink);
+      background: #fff;
+    }
+
+    .modal-form textarea {
+      resize: vertical;
+    }
+
+    .delivery-note {
+      margin: 0.8rem 0 1rem;
+      font-size: 0.95rem;
+      color: var(--success);
+      font-weight: 600;
+    }
+
+    .modal-feedback {
+      margin-top: 0.8rem;
+      min-height: 1.2rem;
+      color: var(--primary-deep);
+      font-weight: 600;
+    }
+
+    .button.primary {
+      background: linear-gradient(135deg, var(--primary) 0%, #cb78bf 100%);
+      color: white;
+      box-shadow: 0 16px 34px rgba(161, 78, 181, 0.24);
+    }
+
+    .button.secondary {
+      background: rgba(255, 255, 255, 0.72);
+      border-color: rgba(161, 78, 181, 0.14);
+      color: var(--primary-deep);
+    }
+
+    .mini-proof {
+      margin-top: 1.25rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .mini-proof strong {
+      color: var(--ink);
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 28rem;
+    }
+
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(4px);
+      opacity: 0.75;
+    }
+
+    .orb.one {
+      inset: 1.4rem auto auto 0;
+      width: 8rem;
+      height: 8rem;
+      background: rgba(243, 166, 198, 0.45);
+      animation: float 7s ease-in-out infinite;
+    }
+
+    .orb.two {
+      inset: auto 1rem 2rem auto;
+      width: 12rem;
+      height: 12rem;
+      background: rgba(190, 163, 242, 0.3);
+      animation: float 8s ease-in-out infinite reverse;
+    }
+
+    .scene {
+      position: relative;
+      border-radius: var(--radius-xl);
+      padding: 1rem;
+      min-height: 100%;
+      background: linear-gradient(180deg, rgba(255,255,255,0.7), rgba(255,255,255,0.45));
+      border: 1px solid rgba(255, 255, 255, 0.65);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(16px);
+      overflow: hidden;
+      transform-style: preserve-3d;
+    }
+
+    .scene::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 12%, rgba(255,255,255,0.92), transparent 22%),
+        linear-gradient(180deg, rgba(226, 194, 233, 0.28), rgba(255, 255, 255, 0));
+      pointer-events: none;
+    }
+
+    .scene-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      align-items: end;
+      min-height: 100%;
+    }
+
+    .woman-card,
+    .product-card,
+    .panel,
+    .step,
+    .benefit-card,
+    .testimonial,
+    .footer-card {
+      background: var(--surface);
+      border: 1px solid rgba(255, 255, 255, 0.75);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(16px);
+      transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+    }
+
+    .woman-card:hover,
+    .product-card:hover,
+    .panel:hover,
+    .step:hover,
+    .benefit-card:hover,
+    .testimonial:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 30px 70px rgba(128, 88, 146, 0.18);
+      border-color: rgba(161, 78, 181, 0.18);
+    }
+
+    .woman-card {
+      position: relative;
+      border-radius: 2rem;
+      min-height: 26rem;
+      overflow: hidden;
+      padding: 1.4rem;
+      background:
+        radial-gradient(circle at top, rgba(255,255,255,0.72), transparent 30%),
+        linear-gradient(180deg, rgba(244, 224, 245, 0.95), rgba(231, 217, 251, 0.76));
+    }
+
+    .woman-figure {
+      position: absolute;
+      inset: auto 1.3rem 0 1.3rem;
+      height: 82%;
+      border-radius: 2rem 2rem 0 0;
+      background:
+        radial-gradient(circle at 50% 10%, #ffeadf 0 12%, transparent 12.5%),
+        radial-gradient(circle at 50% 24%, #71465f 0 15%, transparent 15.5%),
+        radial-gradient(circle at 50% 31%, #ffdccf 0 9%, transparent 9.5%),
+        radial-gradient(circle at 39% 41%, #c491e9 0 7%, transparent 7.3%),
+        radial-gradient(circle at 61% 41%, #c491e9 0 7%, transparent 7.3%),
+        linear-gradient(180deg, transparent 0 31%, #c58fe2 31% 54%, #ad76d0 54% 100%);
+      opacity: 0.95;
+    }
+
+    .woman-card .caption {
+      position: relative;
+      z-index: 1;
+      max-width: 14rem;
+      padding: 0.9rem 1rem;
+      border-radius: 1.2rem;
+      background: rgba(255, 255, 255, 0.68);
+      color: var(--ink);
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .floating-patch {
+      position: absolute;
+      right: 1.2rem;
+      bottom: 5rem;
+      width: 5.8rem;
+      height: 5.8rem;
+      border-radius: 1.5rem;
+      background: linear-gradient(180deg, #fffefe 0%, #f8dff0 100%);
+      border: 1px solid rgba(161, 78, 181, 0.12);
+      box-shadow: 0 18px 28px rgba(161, 78, 181, 0.16);
+      transform: rotate(-12deg);
+      display: grid;
+      place-items: center;
+      color: var(--primary);
+      font-weight: 800;
+      text-align: center;
+      font-size: 0.72rem;
+    }
+
+    .product-stack {
+      display: grid;
+      gap: 1.2rem;
+      grid-column: 1 / -1;
+    }
+
+    .product-card {
+      border-radius: 2rem;
+      padding: 1rem;
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.92), rgba(249, 236, 249, 0.88)),
+        linear-gradient(180deg, rgba(243,166,198,0.12), transparent);
+      border: 1px solid rgba(161, 78, 181, 0.16);
+      box-shadow:
+        0 26px 60px rgba(161, 78, 181, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.72);
+    }
+
+    .product-photo {
+      position: relative;
+      min-height: 34rem;
+      border-radius: 1.6rem;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top center, rgba(255, 255, 255, 0.95), transparent 35%),
+        linear-gradient(180deg, #fff8fd, rgba(240, 219, 245, 0.92));
+      border: 1px solid rgba(161, 78, 181, 0.18);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.85),
+        0 24px 42px rgba(161, 78, 181, 0.16);
+      margin-bottom: 1.1rem;
+    }
+
+    .product-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      padding: 0;
+      background: none;
+      display: none;
+    }
+
+    .product-photo.has-image img,
+    .brand-mark.has-image img,
+    .hero-logo-chip .logo-slot.has-image img {
+      display: block;
+    }
+
+    .product-photo.has-image .product-photo-fallback,
+    .brand-mark.has-image .brand-fallback,
+    .hero-logo-chip .logo-slot.has-image .brand-fallback {
+      display: none;
+    }
+
+    .product-photo-fallback {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      padding: 1rem;
+    }
+
+    .product-photo::before {
+      content: "Most Loved";
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      z-index: 2;
+      padding: 0.45rem 0.8rem;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #a14eb5, #cf76b8);
+      color: white;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      box-shadow: 0 12px 24px rgba(161, 78, 181, 0.28);
+    }
+
+    .product-photo::after {
+      content: "";
+      position: absolute;
+      inset: auto 1rem 1rem auto;
+      width: 8rem;
+      height: 8rem;
+      border-radius: 1.6rem;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.44), transparent 68%);
+      pointer-events: none;
+    }
+
+    .product-photo-fallback .packaging {
+      width: 100%;
+    }
+
+    .brand-fallback {
+      display: grid;
+      place-items: center;
+      width: 100%;
+      height: 100%;
+      color: white;
+      font-size: 1rem;
+      font-weight: 800;
+    }
+
+    .product-card::after {
+      content: "";
+      position: absolute;
+      inset: auto -10% -20% auto;
+      width: 10rem;
+      height: 10rem;
+      border-radius: 50%;
+      background: rgba(231, 217, 251, 0.54);
+      filter: blur(4px);
+    }
+
+    .product-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 2rem;
+      padding: 1px;
+      background: linear-gradient(135deg, rgba(161, 78, 181, 0.38), rgba(255, 255, 255, 0.18));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    .packaging {
+      display: grid;
+      grid-template-columns: 1.05fr 0.9fr;
+      gap: 0.8rem;
+      align-items: end;
+    }
+
+    .product-card > .packaging {
+      display: none;
+    }
+
+    .scene-grid > .woman-card {
+      display: none;
+    }
+
+    .box,
+    .pouch {
+      border-radius: 1.4rem;
+      padding: 1rem;
+      min-height: 12.5rem;
+      background: linear-gradient(180deg, #fffefc, #f9e8f3);
+      border: 1px solid rgba(161, 78, 181, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .box::before,
+    .pouch::before {
+      content: "";
+      position: absolute;
+      inset: auto -15% -20% auto;
+      width: 10rem;
+      height: 10rem;
+      border-radius: 50%;
+      background: rgba(243, 166, 198, 0.18);
+    }
+
+    .brand-drop {
+      display: inline-grid;
+      place-items: center;
+      width: 2.6rem;
+      height: 3rem;
+      background: linear-gradient(180deg, #ce8adb 0%, #9a54bd 100%);
+      clip-path: path("M21.5 0C12.4 14.7 0 20.7 0 34.1C0 47.2 9.9 57 22 57C34.1 57 44 47.2 44 34.1C44 20.7 31.6 14.7 21.5 0Z");
+      color: white;
+      font-size: 0.8rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .pack-title {
+      font-weight: 800;
+      color: var(--primary-deep);
+      letter-spacing: 0.08em;
+      margin-bottom: 0.25rem;
+    }
+
+    .pack-sub {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    .pack-list {
+      margin: 1rem 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 0.55rem;
+      color: var(--ink);
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+
+    .panel {
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.9rem;
+      margin-top: 1.2rem;
+    }
+
+    .hero-marquee {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.8rem;
+      margin-top: 1rem;
+    }
+
+    .hero-chip {
+      padding: 0.9rem;
+      border-radius: 1.2rem;
+      background: rgba(255, 255, 255, 0.74);
+      border: 1px solid rgba(161, 78, 181, 0.08);
+      font-size: 0.88rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .hero-chip strong {
+      display: block;
+      color: var(--primary-deep);
+      font-size: 1rem;
+      margin-bottom: 0.18rem;
+    }
+
+    .stat-box {
+      padding: 1rem;
+      border-radius: 1.3rem;
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(161, 78, 181, 0.08);
+    }
+
+    .stat-box strong {
+      display: block;
+      font-size: 1.5rem;
+      color: var(--primary-deep);
+      margin-bottom: 0.2rem;
+    }
+
+    .section-grid {
+      grid-template-columns: 1fr;
+      align-items: start;
+    }
+
+    .problem-list,
+    .feature-list,
+    .steps-grid,
+    .benefits-grid,
+    .testimonial-grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .problem-item,
+    .feature-item {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      padding: 1.1rem 1.15rem;
+      border-radius: 1.35rem;
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(161, 78, 181, 0.08);
+    }
+
+    .icon {
+      flex: 0 0 3rem;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 1rem;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(180deg, rgba(243,166,198,0.28), rgba(231,217,251,0.74));
+      color: var(--primary-deep);
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .steps-grid,
+    .benefits-grid,
+    .testimonial-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .step,
+    .benefit-card,
+    .testimonial {
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+    }
+
+    .step-number {
+      display: inline-grid;
+      place-items: center;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      background: rgba(161, 78, 181, 0.1);
+      color: var(--primary-deep);
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .rating {
+      color: #e3a300;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .quote {
+      color: var(--ink);
+      font-size: 1.04rem;
+      font-weight: 600;
+      line-height: 1.6;
+      margin-bottom: 1.2rem;
+    }
+
+    .author {
+      color: var(--muted);
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    .cta-band {
+      padding-bottom: 5rem;
+    }
+
+    .waitlist-card {
+      margin-top: 1.4rem;
+      padding: 1.2rem;
+      border-radius: 1.7rem;
+      background:
+        radial-gradient(circle at top right, rgba(255,255,255,0.22), transparent 26%),
+        rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.16);
+    }
+
+    .waitlist-head {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.8rem;
+      align-items: center;
+    }
+
+    .waitlist-badge {
+      padding: 0.45rem 0.8rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.16);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .waitlist-form {
+      display: grid;
+      gap: 0.85rem;
+      margin-top: 1rem;
+    }
+
+    .input-wrap {
+      position: relative;
+    }
+
+    .input-wrap label {
+      position: absolute;
+      top: 0.28rem;
+      left: 1rem;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.82);
+    }
+
+    .waitlist-form input {
+      width: 100%;
+      min-height: 4rem;
+      padding: 1.5rem 1rem 0.75rem;
+      border-radius: 1.2rem;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      font: inherit;
+      outline: none;
+      transition: border-color 0.25s ease, background 0.25s ease, transform 0.25s ease;
+    }
+
+    .waitlist-form input:focus {
+      border-color: rgba(255, 255, 255, 0.5);
+      background: rgba(255, 255, 255, 0.24);
+      transform: translateY(-1px);
+    }
+
+    .waitlist-form input::placeholder {
+      color: rgba(255, 255, 255, 0.82);
+    }
+
+    .waitlist-note {
+      margin-top: 0.85rem;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 0.92rem;
+      min-height: 1.4rem;
+    }
+
+    .waitlist-perks {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin-top: 1rem;
+    }
+
+    .waitlist-perks span {
+      padding: 0.55rem 0.85rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.14);
+      color: rgba(255, 255, 255, 0.92);
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+
+    .cta-strip {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      align-items: center;
+      padding: 2rem;
+      border-radius: 2rem;
+      background:
+        radial-gradient(circle at top right, rgba(255,255,255,0.36), transparent 28%),
+        linear-gradient(135deg, #8e419f 0%, #c769b7 52%, #f2b0ca 100%);
+      color: white;
+      box-shadow: 0 30px 70px rgba(161, 78, 181, 0.24);
+    }
+
+    .cta-strip p,
+    .cta-strip .pill {
+      color: rgba(255, 255, 255, 0.86);
+    }
+
+    .cta-strip .pill {
+      background: rgba(255,255,255,0.12);
+      border-color: rgba(255,255,255,0.18);
+      box-shadow: none;
+    }
+
+    .cta-strip .button.primary {
+      background: white;
+      color: var(--primary-deep);
+    }
+
+    .cta-strip .button.secondary {
+      color: white;
+      border-color: rgba(255,255,255,0.28);
+      background: rgba(255,255,255,0.1);
+    }
+
+    footer {
+      padding: 0 0 4rem;
+    }
+
+    .footer-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .footer-card {
+      border-radius: 2rem;
+      padding: 1.8rem;
+    }
+
+    .footer-links,
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem 1.2rem;
+      margin-top: 1rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .wa-float {
+      position: fixed;
+      right: 1rem;
+      bottom: 1rem;
+      z-index: 30;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      padding: 0.9rem 1rem;
+      border-radius: 999px;
+      background: #21c063;
+      color: white;
+      font-weight: 700;
+      box-shadow: 0 18px 32px rgba(33, 192, 99, 0.28);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .wa-float:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 22px 38px rgba(33, 192, 99, 0.34);
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-14px); }
+    }
+
+    @media (min-width: 780px) {
+      .nav {
+        display: inline-flex;
+      }
+
+      .hero-grid,
+      .section-grid,
+      .cta-strip,
+      .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .section-grid.reverse > :first-child {
+        order: 2;
+      }
+
+      .section-grid.reverse > :last-child {
+        order: 1;
+      }
+
+      .steps-grid,
+      .benefits-grid,
+      .testimonial-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .waitlist-form {
+        grid-template-columns: 1fr 1fr auto;
+        align-items: center;
+      }
+    }
+
+    @media (max-width: 779px) {
+      .site-header .container {
+        grid-template-columns: 1fr auto;
+      }
+
+      .hero {
+        padding-top: 1.6rem;
+      }
+
+      .scene-grid,
+      .packaging,
+      .stats,
+      .hero-marquee {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-visual {
+        min-height: auto;
+      }
+
+      .woman-card {
+        min-height: 22rem;
+      }
+
+      .header-action {
+        padding-inline: 1rem;
+      }
+
+      .product-photo {
+        min-height: 22rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="#top" aria-label="MENSTRA">
+          <span class="brand-mark" data-image-slot>
+            <img src="menstra-logo.jpeg" alt="MENSTRA logo">
+            <span class="brand-fallback">M</span>
+          </span>
+          <span>
+            MENSTRA
+            <small>menstrual mantra</small>
+          </span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <a href="#problem">Why it matters</a>
+          <a href="#solution">Meet MENSTRA</a>
+          <a href="#testimonials">Reviews</a>
+          <a href="#faq">FAQs</a>
+        </nav>
+        <a class="header-action" href="#cta">Try Now</a>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy" data-reveal>
+            <div class="hero-logo-chip">
+              <span class="logo-slot" data-image-slot>
+                <img src="menstra-logo.jpeg" alt="MENSTRA brand logo">
+                <span class="brand-fallback">M</span>
+              </span>
+              <span>
+                <strong>MENSTRA</strong>
+                <span>Elegant herbal comfort for everyday period pain relief</span>
+              </span>
+            </div>
+            <div class="pill"><span class="dot"></span> Gentle herbal care • 100+ women already interested</div>
+            <h1>Feel Lighter, Calmer, and in Control During Your Period.</h1>
+            <p>MENSTRA is a discreet herbal patch created for women who need comfort without slowing down. Wear it in seconds and move through classes, work, travel, and everyday life with more ease.</p>
+            <div class="hero-actions">
+              <a class="button primary" href="#cta">Try Now</a>
+              <a class="button secondary" href="#solution">Learn More</a>
+            </div>
+            <div class="badge-row">
+              <div class="pill">4.5/5 early love</div>
+              <div class="pill">Up to 8 hours of comfort</div>
+              <div class="pill">Herbal and tablet-free support</div>
+            </div>
+            <div class="mini-proof">
+              <span><strong>Loved by students and professionals</strong> who want quick comfort without putting their day on pause.</span>
+            </div>
+            <div class="hero-marquee">
+              <div class="hero-chip">
+                <strong>8 Hours</strong>
+                steady comfort through busy days
+              </div>
+              <div class="hero-chip">
+                <strong>Herbal</strong>
+                a gentle alternative to repeated tablets
+              </div>
+              <div class="hero-chip">
+                <strong>Portable</strong>
+                made for campus, work, and travel
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual" data-reveal>
+            <div class="orb one"></div>
+            <div class="orb two"></div>
+            <div class="scene">
+              <div class="scene-grid">
+                <article class="woman-card">
+                  <div class="caption">Discreet enough for lectures, office days, commutes, and travel.</div>
+                  <div class="woman-figure" aria-hidden="true"></div>
+                  <div class="floating-patch">MENSTRA<br>PATCH</div>
+                </article>
+                <div class="product-stack">
+                  <article class="product-card">
+                    <div class="product-photo" data-image-slot>
+                      <img src="menstra-product.png" alt="MENSTRA product pack">
+                      <div class="product-photo-fallback">
+                        <div class="packaging">
+                          <div class="box">
+                            <div class="brand-drop"></div>
+                            <div class="pack-title">MENSTRA</div>
+                            <div class="pack-sub">Herbal Patch for Period Pain Relief</div>
+                            <ul class="pack-list">
+                              <li>Fast relief</li>
+                              <li>Discreet and portable</li>
+                              <li>Herbal and safe</li>
+                            </ul>
+                          </div>
+                          <div class="pouch">
+                            <div class="brand-drop"></div>
+                            <div class="pack-title">Portable Pouch</div>
+                            <div class="pack-sub">Comfort that fits in your bag, pocket, or desk drawer.</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="packaging">
+                      <div class="box">
+                        <div class="brand-drop"></div>
+                        <div class="pack-title">MENSTRA</div>
+                        <div class="pack-sub">Herbal Patch for Period Pain Relief</div>
+                        <ul class="pack-list">
+                          <li>Fast relief</li>
+                          <li>Discreet and portable</li>
+                          <li>Herbal and safe</li>
+                        </ul>
+                      </div>
+                      <div class="pouch">
+                        <div class="brand-drop"></div>
+                        <div class="pack-title">Portable Pouch</div>
+                        <div class="pack-sub">Comfort that fits in your bag, pocket, or desk drawer.</div>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="panel">
+                    <div class="eyebrow">Traction</div>
+                    <h3>Women are already excited about it</h3>
+                    <p>Early interest is coming from students, young professionals, and women looking for a softer, more lifestyle-friendly alternative to repeated painkiller use.</p>
+                    <div class="stats">
+                      <div class="stat-box">
+                        <strong>100+</strong>
+                        women interested
+                      </div>
+                      <div class="stat-box">
+                        <strong>4.5/5</strong>
+                        early satisfaction signal
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="problem">
+        <div class="container section-grid">
+          <div data-reveal>
+            <div class="eyebrow">The Problem</div>
+            <h2>Period Pain Should Never Decide Your Day</h2>
+            <p>When cramps show up, most solutions feel inconvenient, messy, or too dependent on tablets. MENSTRA is made for the moments when you still want to focus, move, show up, and feel like yourself.</p>
+          </div>
+          <div class="problem-list" data-reveal>
+            <article class="problem-item">
+              <div class="icon">01</div>
+              <div>
+                <h3>Missed classes and work</h3>
+                <p>Pain can interrupt concentration, attendance, and confidence right when the day matters most.</p>
+              </div>
+            </article>
+            <article class="problem-item">
+              <div class="icon">02</div>
+              <div>
+                <h3>Dependence on painkillers</h3>
+                <p>Many women want a gentler option they can reach for before taking another dose.</p>
+              </div>
+            </article>
+            <article class="problem-item">
+              <div class="icon">03</div>
+              <div>
+                <h3>Inconvenient solutions</h3>
+                <p>Hot water bags, rest breaks, and bulky products are not always realistic outside the house.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="solution">
+        <div class="container section-grid reverse">
+          <div data-reveal>
+            <div class="eyebrow">The Solution</div>
+            <h2>Meet MENSTRA</h2>
+            <p>A beautifully designed herbal patch that combines comfort, portability, and everyday practicality. It feels easy to trust, simple to use, and natural to carry wherever life takes you.</p>
+            <div class="feature-list">
+              <article class="feature-item">
+                <div class="icon">H</div>
+                <div>
+                  <h3>Herbal and safe</h3>
+                  <p>Created for women who want a softer, more natural comfort ritual with gentle ingredients.</p>
+                </div>
+              </article>
+              <article class="feature-item">
+                <div class="icon">F</div>
+                <div>
+                  <h3>Fast-acting relief</h3>
+                  <p>Helps bring quick comfort when cramps begin to affect your focus, movement, or mood.</p>
+                </div>
+              </article>
+              <article class="feature-item">
+                <div class="icon">P</div>
+                <div>
+                  <h3>Portable and discreet</h3>
+                  <p>Small enough to slip into a handbag, backpack, desk drawer, or even your pocket.</p>
+                </div>
+              </article>
+              <article class="feature-item">
+                <div class="icon">A</div>
+                <div>
+                  <h3>Affordable monthly use</h3>
+                  <p>Made to feel accessible for monthly use without sacrificing quality or trust.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="panel" data-reveal>
+            <div class="eyebrow">Product Snapshot</div>
+            <h3>Beautiful branding, everyday utility</h3>
+            <p>The pack design blends soft pinks, calm lavender tones, and clear benefit callouts to feel trustworthy, feminine, and instantly appealing at first glance.</p>
+            <div class="packaging" style="margin-top: 1.3rem;">
+              <div class="box">
+                <div class="brand-drop"></div>
+                <div class="pack-title">MENSTRA</div>
+                <div class="pack-sub">Fast Relief • Discreet & Portable • Herbal & Safe</div>
+              </div>
+              <div class="pouch">
+                <div class="brand-drop"></div>
+                <div class="pack-title">Up to 8 Hours</div>
+                <div class="pack-sub">Comfort designed for busy, real-world days.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="how-it-works">
+        <div class="container">
+          <div class="eyebrow">How It Works</div>
+          <h2>Comfort in 3 Simple Steps</h2>
+          <div class="steps-grid">
+            <article class="step" data-reveal>
+              <div class="step-number">1</div>
+              <h3>Apply the patch</h3>
+              <p>Place MENSTRA where support is needed and continue your routine without any bulky setup.</p>
+            </article>
+            <article class="step" data-reveal>
+              <div class="step-number">2</div>
+              <h3>Absorbs through skin</h3>
+              <p>The herbal patch works comfortably while staying discreet under everyday clothing.</p>
+            </article>
+            <article class="step" data-reveal>
+              <div class="step-number">3</div>
+              <h3>Relieves cramps</h3>
+              <p>Enjoy soothing comfort that helps you focus better, stay active, and feel more in control.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="benefits">
+        <div class="container">
+          <div class="eyebrow">Why Women Choose It</div>
+          <h2>More Than Just Pain Relief</h2>
+          <div class="benefits-grid">
+            <article class="benefit-card" data-reveal>
+              <h3>Functional</h3>
+              <p>Comfort wherever you are, without plugs, heating setups, or bulky accessories.</p>
+            </article>
+            <article class="benefit-card" data-reveal>
+              <h3>Emotional</h3>
+              <p>More confidence and calm when your body needs support but your schedule keeps moving.</p>
+            </article>
+            <article class="benefit-card" data-reveal>
+              <h3>Social</h3>
+              <p>Stay present in classes, meetings, commutes, and plans without feeling like you have to step away.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="testimonials">
+        <div class="container">
+          <div class="eyebrow">Social Proof</div>
+          <h2>Relief That Fits Real Life</h2>
+          <div class="testimonial-grid">
+            <article class="testimonial" data-reveal>
+              <div class="rating">***** <span style="color: var(--muted); font-weight: 600;">4.5/5</span></div>
+              <div class="quote">"Helped me during exams when I had no time to stop and rest."</div>
+              <div class="author">Aarya, college student</div>
+            </article>
+            <article class="testimonial" data-reveal>
+              <div class="rating">***** <span style="color: var(--muted); font-weight: 600;">4.5/5</span></div>
+              <div class="quote">"Much easier than painkillers for the days I just want a simple backup."</div>
+              <div class="author">Nisha, early-career professional</div>
+            </article>
+            <article class="testimonial" data-reveal>
+              <div class="rating">***** <span style="color: var(--muted); font-weight: 600;">4.5/5</span></div>
+              <div class="quote">"It feels discreet, pretty, and practical. I would actually keep this in my bag."</div>
+              <div class="author">Riya, design student</div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section cta-band" id="cta">
+        <div class="container">
+          <div class="cta-strip" data-reveal>
+            <div>
+              <div class="pill"><span class="dot"></span> Everyday comfort for modern women</div>
+              <h2>Choose a Better Way to Handle Period Pain</h2>
+              <p>Join the women discovering a cleaner, gentler, and more flexible way to manage period discomfort without putting life on hold.</p>
+            </div>
+            <div>
+              <div class="hero-actions" style="margin: 0 0 1rem;">
+                <button id="buy-now-button" class="button primary" type="button">Buy Now</button>
+                <a class="button secondary" href="#waitlist">Join Waitlist</a>
+              </div>
+              <p style="margin: 0;">Perfect for students, office days, travel, and every moment when comfort needs to keep up with your life.</p>
+              <div class="waitlist-card" id="waitlist">
+                <div class="waitlist-head">
+                  <strong>Join the early access list</strong>
+                  <span class="waitlist-badge">Limited early access</span>
+                </div>
+                <form class="waitlist-form" id="waitlist-form">
+                  <div class="input-wrap">
+                    <label for="waitlist-name">Name</label>
+                    <input type="text" id="waitlist-name" name="name" placeholder="Your name" required>
+                  </div>
+                  <div class="input-wrap">
+                    <label for="waitlist-email">Email</label>
+                    <input type="email" id="waitlist-email" name="email" placeholder="Email address" required>
+                  </div>
+                  <button class="button primary" type="submit">Join</button>
+                </form>
+                <div class="waitlist-perks">
+                  <span>Exclusive early updates</span>
+                  <span>First access to launch</span>
+                  <span>Priority launch offers</span>
+                </div>
+                <div class="waitlist-note" id="waitlist-note"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="faq">
+      <div class="container footer-grid">
+        <div class="footer-card">
+          <div class="brand">
+            <span class="brand-mark" data-image-slot>
+              <img src="menstra-logo.jpeg" alt="MENSTRA logo">
+              <span class="brand-fallback">M</span>
+            </span>
+            <span>
+              MENSTRA
+              <small>Portable herbal comfort for period pain relief</small>
+            </span>
+          </div>
+          <p style="margin-top: 1rem;">A women-first wellness concept designed to make relief feel discreet, trustworthy, and easy to carry into daily life.</p>
+          <div class="footer-links">
+            <a href="#solution">About</a>
+            <a href="#faq">FAQs</a>
+            <a href="mailto:menstra.official@gmail.com?subject=MENSTRA%20Privacy%20Question">Privacy</a>
+          </div>
+        </div>
+        <div class="footer-card">
+          <div class="eyebrow">Contact</div>
+          <h3>Let's stay connected</h3>
+          <p>Email: menstra.official@gmail.com<br>Instagram: @menstra.official</p>
+          <div class="social-links">
+            <a href="https://instagram.com/menstra_official" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://wa.me/?text=Hi%20MENSTRA%2C%20I%20have%20a%20question%20about%20the%20patch." target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <a href="mailto:menstra.official@gmail.com?subject=MENSTRA%20Inquiry">Email</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <a class="wa-float" href="https://wa.me/?text=Hi%20MENSTRA%2C%20I%20want%20to%20know%20more%20about%20the%20patch." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+      <span>Chat</span>
+      WhatsApp Chat
+    </a>
+
+    <div id="buy-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="buy-modal-title">
+      <div class="modal-content">
+        <button id="close-buy-modal" class="modal-close" aria-label="Close">×</button>
+        <h2 id="buy-modal-title">Buy MENSTRA Patch</h2>
+        <p class="modal-subtitle">Free delivery is a limited-time offer. Add your details and place order.</p>
+        <form id="buy-form" class="modal-form">
+          <div class="input-wrap">
+            <label for="item-name">Item</label>
+            <input type="text" id="item-name" value="MENSTRA Herbal Pain Patch (6 patches pack)" readonly>
+          </div>
+          <div class="input-wrap">
+            <label for="unit-price">Unit price</label>
+            <input type="text" id="unit-price" value="₹150 per pack" readonly>
+          </div>
+          <div class="input-wrap">
+            <label for="quantity">Quantity</label>
+            <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+          </div>
+          <div class="input-wrap">
+            <label for="total-price">Total price</label>
+            <input type="text" id="total-price" value="₹150" readonly>
+          </div>
+          <div class="input-wrap">
+            <label for="customer-name">Customer Name</label>
+            <input type="text" id="customer-name" name="customerName" placeholder="Your full name" required>
+          </div>
+          <div class="input-wrap">
+            <label for="shipping-address">Shipping Address</label>
+            <textarea id="shipping-address" name="address" placeholder="Street, city, postal code" rows="3" required></textarea>
+          </div>
+          <div class="delivery-note">Delivery charge: <strong>FREE</strong> (offer applied)</div>
+          <button type="submit" class="button primary">Confirm Order</button>
+          <div id="buy-feedback" class="modal-feedback" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.addEventListener("mousemove", function (event) {
+      document.body.style.setProperty("--mx", event.clientX + "px");
+      document.body.style.setProperty("--my", event.clientY + "px");
+    });
+
+    document.querySelectorAll("[data-image-slot]").forEach(function (slot) {
+      const img = slot.querySelector("img");
+
+      if (!img) {
+        return;
+      }
+
+      img.addEventListener("load", function () {
+        slot.classList.add("has-image");
+      });
+
+      if (img.complete && img.naturalWidth > 0) {
+        slot.classList.add("has-image");
+      }
+    });
+
+    const revealObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.14 });
+
+    document.querySelectorAll("[data-reveal]").forEach(function (item) {
+      revealObserver.observe(item);
+    });
+
+    const waitlistForm = document.getElementById("waitlist-form");
+    const waitlistNote = document.getElementById("waitlist-note");
+
+    waitlistForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const name = document.getElementById("waitlist-name").value.trim();
+      const email = document.getElementById("waitlist-email").value.trim();
+
+      if (!name || !email) {
+        waitlistNote.textContent = "Please enter your name and email.";
+        return;
+      }
+
+      waitlistNote.textContent = "Thanks, " + name + ". You are officially on the MENSTRA waitlist with " + email + ".";
+      waitlistForm.reset();
+    });
+
+    const buyNowButton = document.getElementById("buy-now-button");
+    const buyModal = document.getElementById("buy-modal");
+    const closeBuyModal = document.getElementById("close-buy-modal");
+    const buyForm = document.getElementById("buy-form");
+    const buyFeedback = document.getElementById("buy-feedback");
+
+    function openBuyModal() {
+      buyModal.classList.remove("hidden");
+      document.body.style.overflow = "hidden";
+      document.getElementById("customer-name").focus();
+    }
+
+    function closeBuyModalFn() {
+      buyModal.classList.add("hidden");
+      document.body.style.overflow = "";
+      buyForm.reset();
+      buyFeedback.textContent = "";
+    }
+
+    buyNowButton.addEventListener("click", openBuyModal);
+    closeBuyModal.addEventListener("click", closeBuyModalFn);
+
+    buyModal.addEventListener("click", function (event) {
+      if (event.target === buyModal) {
+        closeBuyModalFn();
+      }
+    });
+
+    function updateTotalPrice() {
+      const quantity = Number(document.getElementById("quantity").value) || 1;
+      const unitPrice = 150;
+      const total = quantity * unitPrice;
+      document.getElementById("total-price").value = `₹${total.toLocaleString()}`;
+      return total;
+    }
+
+    document.getElementById("quantity").addEventListener("input", updateTotalPrice);
+    updateTotalPrice();
+
+    buyForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const quantity = Number(document.getElementById("quantity").value);
+      const customerName = document.getElementById("customer-name").value.trim();
+      const address = document.getElementById("shipping-address").value.trim();
+      const totalPrice = updateTotalPrice();
+
+      if (!quantity || quantity < 1 || !customerName || !address) {
+        buyFeedback.textContent = "Please complete all order fields.";
+        buyFeedback.style.color = "#b72f6d";
+        return;
+      }
+
+      buyFeedback.style.color = "#2a7a46";
+      buyFeedback.textContent = `Thanks, ${customerName}. Your order for ${quantity} pack(s) (6 patches per pack) is ready for ₹${totalPrice.toLocaleString()}. Delivery is FREE as part of this offer.`;
+
+      // In a real app, send data to server here.
+      setTimeout(closeBuyModalFn, 2400);
+    });
+  </script>
+</body>
+</html>
